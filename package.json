@@ -4,6 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "parcel run index.html",
+    "build": "parcel build index.html",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -12,5 +14,8 @@
   "dependencies": {
     "parcel": "^1.12.4",
     "qrcode": "^1.4.4"
+  },
+  "devDependencies": {
+    "sass": "^1.26.10"
   }
 }

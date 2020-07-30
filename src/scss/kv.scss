@@ -1,0 +1,12 @@
+.kv  {
+    grid-column-start: 4;
+    grid-column-end: 10;
+    grid-row-start: 40;
+    grid-row-end: 45;
+
+    & > img  {
+        max-width: 90%;
+        display: block;
+        margin: 0 auto;
+    }
+}

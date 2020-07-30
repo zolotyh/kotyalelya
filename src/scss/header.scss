@@ -1,0 +1,12 @@
+.header {
+    grid-column-start: 3;
+    grid-column-end: 11;
+    grid-row-start: 3;
+    grid-row-end: 9;
+
+    & > img {
+        max-width: 90%;
+        display: block;
+        margin: 0 auto;
+    }
+}
