@@ -363,24 +363,91 @@ body {
 
 @media print {
   body {
-    -webkit-print-color-adjust: exact;
+    -webkit-print-color-adjust: exact !important;
+    background-image: url(/noise.0957db02.png), linear-gradient(297.63deg, #326295 18.25%, #1e3d5e 61.4%);
   }
 
+  @page {
+    background-color: #000;
+  }
   .wrapper {
     background: none;
   }
 }
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 1px 20px;
+  grid-template-areas: ". . . . . . . . . . . ." ". . . . . . . . . . . ." ". . . . . . . . . . . ." ". . . . . . . . . . . ." ". . . . . . . . . . . ." ". . . . . . . . . . . ." ". . . . . . . . . . . ." ". . . . . . . . . . . ." ". . . . . . . . . . . ." ". . . . . . . . . . . ." ". . . . . . . . . . . ." ". . . . . . . . . . . ." ". . . . . . . . . . . ." ". . . . . . . . . . . ." ". . . . . . . . . . . ." ". . . . . . . . . . . ." ". . . . . . . . . . . ." ". . . . . . . . . . . ." ". . . . . . . . . . . ." ". . . . . . . . . . . ." ". . . . . . . . . . . ." ". . . . . . . . . . . ." ". . . . . . . . . . . ." ". . . . . . . . . . . ." ". . . . . . . . . . . ." ". . . . . . . . . . . ." ". . . . . . . . . . . ." ". . . . . . . . . . . ." ". . . . . . . . . . . ." ". . . . . . . . . . . ." ". . . . . . . . . . . ." ". . . . . . . . . . . ." ". . . . . . . . . . . ." ". . . . . . . . . . . ." ". . . . . . . . . . . ." ". . . . . . . . . . . ." ". . . . . . . . . . . ." ". . . . . . . . . . . ." ". . . . . . . . . . . ." ". . . . . . . . . . . ." ". . . . . . . . . . . ." ". . . . . . . . . . . ." ". . . . . . . . . . . ." ". . . . . . . . . . . ." ". . . . . . . . . . . ." ". . . . . . . . . . . ." ". . . . . . . . . . . .";
+}
+.grid .header {
+  grid-column-start: 3;
+  grid-column-end: 11;
+  grid-row-start: 2;
+  grid-row-end: 8;
+}
+.grid .address {
+  grid-column-start: 3;
+  grid-column-end: 11;
+  grid-row-start: 23;
+  grid-row-end: 28;
+}
+.grid .time {
+  grid-column-start: 3;
+  grid-column-end: 11;
+  grid-row-start: 27;
+  grid-row-end: 31;
+}
+.grid .hashtag {
+  grid-column-start: 3;
+  grid-column-end: 11;
+  grid-row-start: 32;
+  grid-row-end: 34;
+}
+.grid .color--text {
+  grid-column-start: 3;
+  grid-column-end: 9;
+  grid-row-start: 36;
+  grid-row-end: 40;
+}
+.grid .color--img {
+  grid-column-start: 8;
+  grid-column-end: 12;
+  grid-row-start: 36;
+  grid-row-end: 40;
+}
+.grid .name {
+  grid-column-start: 3;
+  grid-column-end: 12;
+  grid-row-start: 13;
+  grid-row-end: 18;
+}
+.grid .title1 {
+  grid-column-start: 3;
+  grid-column-end: 11;
+  grid-row-start: 10;
+  grid-row-end: 13;
+}
+.grid .title2 {
+  grid-column-start: 3;
+  grid-column-end: 11;
+  grid-row-start: 18;
+  grid-row-end: 21;
+}
+.grid .kv {
+  grid-column-start: 4;
+  grid-column-end: 10;
+  grid-row-start: 42;
+  grid-row-end: 45;
+}
+
 .wrapper {
   width: 210mm;
   height: 297mm;
   margin: 0 auto;
   background-image: url(/noise.0957db02.png), linear-gradient(297.63deg, #326295 18.25%, #1e3d5e 61.4%);
   border-radius: 2mm;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  gap: 1px 20px;
-  grid-template-areas: ". . . . . . . . . . . ." ". . . . . . . . . . . ." ". . . . . . . . . . . ." ". . . . . . . . . . . ." ". . . . . . . . . . . ." ". . . . . . . . . . . ." ". . . . . . . . . . . ." ". . . . . . . . . . . ." ". . . . . . . . . . . ." ". . . . . . . . . . . ." ". . . . . . . . . . . ." ". . . . . . . . . . . ." ". . . . . . . . . . . ." ". . . . . . . . . . . ." ". . . . . . . . . . . ." ". . . . . . . . . . . ." ". . . . . . . . . . . ." ". . . . . . . . . . . ." ". . . . . . . . . . . ." ". . . . . . . . . . . ." ". . . . . . . . . . . ." ". . . . . . . . . . . ." ". . . . . . . . . . . ." ". . . . . . . . . . . ." ". . . . . . . . . . . ." ". . . . . . . . . . . ." ". . . . . . . . . . . ." ". . . . . . . . . . . ." ". . . . . . . . . . . ." ". . . . . . . . . . . ." ". . . . . . . . . . . ." ". . . . . . . . . . . ." ". . . . . . . . . . . ." ". . . . . . . . . . . ." ". . . . . . . . . . . ." ". . . . . . . . . . . ." ". . . . . . . . . . . ." ". . . . . . . . . . . ." ". . . . . . . . . . . ." ". . . . . . . . . . . ." ". . . . . . . . . . . ." ". . . . . . . . . . . ." ". . . . . . . . . . . ." ". . . . . . . . . . . ." ". . . . . . . . . . . ." ". . . . . . . . . . . ." ". . . . . . . . . . . .";
 }
 @media print {
   @page {
@@ -395,10 +462,29 @@ body {
 }
 
 .header {
-  grid-column-start: 3;
-  grid-column-end: 11;
-  grid-row-start: 3;
-  grid-row-end: 9;
+  font-family: "tasty_morselregular", cursive;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 110%;
+  text-align: center;
+  color: #a4dbe4;
+}
+.header span::before, .header span::after {
+  content: "";
+  display: inline-block;
+  background-size: cover;
+}
+.header span::before {
+  width: 65px;
+  height: 90px;
+  background-image: url(/header--left.bc418f79.svg);
+}
+.header span::after {
+  width: 62px;
+  height: 47px;
+  background-image: url(/header--right.ac04acac.svg);
+  vertical-align: middle;
 }
 .header > img {
   max-width: 90%;
@@ -406,39 +492,15 @@ body {
   margin: 0 auto;
 }
 
-.title1 {
-  grid-column-start: 3;
-  grid-column-end: 11;
-  grid-row-start: 12;
-  grid-row-end: 15;
-}
-
-.title2 {
-  grid-column-start: 3;
-  grid-column-end: 11;
-  grid-row-start: 20;
-  grid-row-end: 23;
-}
-
-.kv {
-  grid-column-start: 4;
-  grid-column-end: 10;
-  grid-row-start: 40;
-  grid-row-end: 45;
-}
 .kv > img {
-  max-width: 90%;
+  max-width: 70%;
   display: block;
   margin: 0 auto;
 }
 
 .name {
-  grid-column-start: 4;
-  grid-column-end: 11;
-  grid-row-start: 15;
-  grid-row-end: 20;
   font-family: "tasty_morselregular", cursive;
-  font-size: 24px;
+  font-size: 36px;
   text-align: left;
   color: #fff;
   opacity: 0.8;
@@ -446,9 +508,7 @@ body {
   align-items: center;
   justify-content: left;
   position: relative;
-}
-.name > div {
-  margin-left: 54px;
+  line-height: 120%;
 }
 .name > div::before {
   content: "";
@@ -458,27 +518,55 @@ body {
   left: -10px;
   top: 50%;
   transform: translate(0%, -50%);
-  background-image: url("/heart.195e365b.svg");
   background-size: auto 100%;
   background-repeat: no-repeat;
 }
 
 .color--text {
-  grid-column-start: 3;
-  grid-column-end: 8;
-  grid-row-start: 25;
-  grid-row-end: 30;
   font-size: 18px;
 }
 
-.color--img {
-  grid-column-start: 8;
-  grid-column-end: 12;
-  grid-row-start: 25;
-  grid-row-end: 30;
-}
 .color--img > img {
   max-height: 100%;
+}
+
+.address {
+  font-size: 18px;
+  padding-left: 40px;
+  background-image: url(/map.6acf11de.svg);
+  background-repeat: no-repeat;
+  background-size: 38px;
+  background-position: -4px 30px;
+}
+
+.address--title {
+  margin-left: -40px;
+  font-size: 0.7em;
+  line-height: 150%;
+  color: #A4DBE4;
+}
+
+.time {
+  font-size: 18px;
+}
+
+.time--value {
+  font-size: 2em;
+}
+
+.time--title {
+  font-size: 0.7em;
+  line-height: 150%;
+  color: #A4DBE4;
+}
+
+.hashtag {
+  font-size: 36px;
+  font-family: "tasty_morselregular", cursive;
+}
+.hashtag a {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
 }
 
 /*# sourceMappingURL=/scss.8c25d549.css.map */

@@ -119,39 +119,35 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   return newRequire;
 })({"index.js":[function(require,module,exports) {
 var d = document;
+var TITLE = "title";
+d.addEventListener("DOMContentLoaded", function () {
+  var params = new URLSearchParams(window.location.search);
+  d.addEventListener("keypress", function (e) {
+    e.preventDefault();
 
-var getUrlParams = function getUrlParams() {
-  return new URLSearchParams(window.location.search);
-};
+    if (e.key === "?") {
+      params.set(TITLE, b64EncodeUnicode(prompt("Введите текст приглашения!")));
+      window.location.search = params.toString();
+    }
+  }, false);
+  document.querySelector(".name > div").innerHTML = b64DecodeUnicode(decodeURIComponent(params.get(TITLE)));
+});
 
 function b64EncodeUnicode(str) {
   // first we use encodeURIComponent to get percent-encoded UTF-8,
   // then we convert the percent encodings into raw bytes which
   // can be fed into btoa.
   return btoa(encodeURIComponent(str).replace(/%([0-9A-F]{2})/g, function toSolidBytes(_, p1) {
-    return String.fromCharCode('0x' + p1);
+    return String.fromCharCode("0x" + p1);
   }));
 }
 
 function b64DecodeUnicode(str) {
   // Going backwards: from bytestream, to percent-encoding, to original string.
-  return decodeURIComponent(atob(str).split('').map(function (c) {
-    return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
-  }).join(''));
+  return decodeURIComponent(atob(str).split("").map(function (c) {
+    return "%" + ("00" + c.charCodeAt(0).toString(16)).slice(-2);
+  }).join(""));
 }
-
-d.addEventListener("DOMContentLoaded", function () {
-  var TITLE = 'title';
-  var params = getUrlParams();
-  d.querySelector('.form').addEventListener('submit', function (e) {
-    e.preventDefault();
-    params.set(TITLE, b64EncodeUnicode(document.querySelector('.tarea').value));
-    window.location.search = params.toString();
-  });
-  var title = b64DecodeUnicode(decodeURIComponent(params.get(TITLE)));
-  document.querySelector('.name > div').innerHTML = title;
-  document.querySelector('.tarea').value = title;
-});
 },{}],"node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -180,7 +176,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "65487" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60934" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
