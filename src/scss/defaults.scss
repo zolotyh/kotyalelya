@@ -1,8 +1,6 @@
 /* apply a natural box layout model to all elements, but allowing components to change */
 html, body {
   box-sizing: border-box;
-  width: 210mm;
-  height: 297mm;
   min-width: 210mm;
   min-height: 297mm;
 }
