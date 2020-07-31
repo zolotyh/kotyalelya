@@ -1,22 +1,17 @@
 .name {
-    grid-column-start: 4;
-    grid-column-end: 11;
-    grid-row-start: 15;
-    grid-row-end: 20;
-
     font-family: "tasty_morselregular", cursive;
-    font-size: 24px;
+    font-size: 36px;
     text-align: left;
     color: #fff;
     opacity: 0.8;
-
     display: flex;
     align-items: center;
     justify-content: left;
     position: relative;
+    line-height: 120%;
 
     & > div {
-        margin-left: 54px;
+        // margin-left: 54px;
 
         &::before {
             content: "";
@@ -26,7 +21,7 @@
             left: -10px;
             top: 50%;
             transform: translate(0%, -50%);
-            background-image: url("../img/heart.svg");
+            // background-image: url("../img/heart.svg");
             background-size: auto 100%;
             background-repeat: no-repeat;
         }

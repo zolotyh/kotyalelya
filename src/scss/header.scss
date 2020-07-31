@@ -1,8 +1,32 @@
 .header {
-    grid-column-start: 3;
-    grid-column-end: 11;
-    grid-row-start: 3;
-    grid-row-end: 9;
+
+    font-family: "tasty_morselregular", cursive;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 110%;
+    text-align: center;
+    color: #a4dbe4;
+
+    span {
+        &::before, &::after {
+            content: "";
+            display: inline-block;
+            background-size: cover;
+        }
+        &::before {
+            width: 65px;
+            height: 90px;
+            background-image: url(../img/header--left.svg);
+        }
+
+        &::after {
+            width: 62px;
+            height: 47px;
+            background-image: url(../img/header--right.svg);
+            vertical-align: middle;
+        }
+    }
 
     & > img {
         max-width: 90%;

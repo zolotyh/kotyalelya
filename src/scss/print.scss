@@ -1,6 +1,11 @@
 @media print {
     body {
-        -webkit-print-color-adjust: exact;
+        -webkit-print-color-adjust: exact !important;
+        background-image: url(../img/noise.png), linear-gradient(297.63deg, #326295 18.25%, #1e3d5e 61.4%);
+    }
+
+    @page {
+        background-color: #000;
     }
 
     .wrapper {

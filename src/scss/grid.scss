@@ -1,0 +1,72 @@
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 1px 20px;
+    grid-template-areas: ". . . . . . . . . . . ." ". . . . . . . . . . . ." ". . . . . . . . . . . ." ". . . . . . . . . . . ." ". . . . . . . . . . . ." ". . . . . . . . . . . ." ". . . . . . . . . . . ." ". . . . . . . . . . . ." ". . . . . . . . . . . ." ". . . . . . . . . . . ." ". . . . . . . . . . . ." ". . . . . . . . . . . ." ". . . . . . . . . . . ." ". . . . . . . . . . . ." ". . . . . . . . . . . ." ". . . . . . . . . . . ." ". . . . . . . . . . . ." ". . . . . . . . . . . ." ". . . . . . . . . . . ." ". . . . . . . . . . . ." ". . . . . . . . . . . ." ". . . . . . . . . . . ." ". . . . . . . . . . . ." ". . . . . . . . . . . ." ". . . . . . . . . . . ." ". . . . . . . . . . . ." ". . . . . . . . . . . ." ". . . . . . . . . . . ." ". . . . . . . . . . . ." ". . . . . . . . . . . ." ". . . . . . . . . . . ." ". . . . . . . . . . . ." ". . . . . . . . . . . ." ". . . . . . . . . . . ." ". . . . . . . . . . . ." ". . . . . . . . . . . ." ". . . . . . . . . . . ." ". . . . . . . . . . . ." ". . . . . . . . . . . ." ". . . . . . . . . . . ." ". . . . . . . . . . . ." ". . . . . . . . . . . ." ". . . . . . . . . . . ." ". . . . . . . . . . . ." ". . . . . . . . . . . ." ". . . . . . . . . . . ." ". . . . . . . . . . . .";
+
+    .header {
+        grid-column-start: 3;
+        grid-column-end: 11;
+        grid-row-start: 2;
+        grid-row-end: 8;
+    }
+
+    .address {
+        grid-column-start: 3;
+        grid-column-end: 11;
+        grid-row-start: 23;
+        grid-row-end: 28;
+    }
+
+    .time {
+        grid-column-start: 3;
+        grid-column-end: 11;
+        grid-row-start: 27;
+        grid-row-end: 31;
+    }
+
+    .hashtag {
+        grid-column-start: 3;
+        grid-column-end: 11;
+        grid-row-start: 32;
+        grid-row-end: 34;
+    }
+
+    .color--text {
+        grid-column-start: 3;
+        grid-column-end: 9;
+        grid-row-start: 36;
+        grid-row-end: 40;
+    }
+    .color--img {
+        grid-column-start: 8;
+        grid-column-end: 12;
+        grid-row-start: 36;
+        grid-row-end: 40;
+    }
+    .name {
+        grid-column-start: 3;
+        grid-column-end: 12;
+        grid-row-start: 13;
+        grid-row-end: 18;
+    }
+    .title1 {
+        grid-column-start: 3;
+        grid-column-end: 11;
+        grid-row-start: 10;
+        grid-row-end: 13;
+    }
+    .title2 {
+        grid-column-start: 3;
+        grid-column-end: 11;
+        grid-row-start: 18;
+        grid-row-end: 21;
+    }
+    .kv {
+        grid-column-start: 4;
+        grid-column-end: 10;
+        grid-row-start: 42;
+        grid-row-end: 45;
+    }
+}
