@@ -1,29 +1,44 @@
 const d = document;
 const TITLE = "title";
+const IS_RELATIVES = "isRelatives";
+const params = new URLSearchParams(window.location.search);
 
-d.addEventListener("DOMContentLoaded", () => {
-    const params = new URLSearchParams(window.location.search);
+d.addEventListener("DOMContentLoaded", initScenarioHandler);
+d.addEventListener(
+    "keypress",
+    e => {
+        e.preventDefault();
+        if (e.key === "?") {
+            assignVariablesHandler();
+        }
+    },
+    false
+);
 
-    d.addEventListener(
-        "keypress",
-        e => {
-            e.preventDefault();
+function assignVariablesHandler() {
+    params.set(TITLE, b64EncodeUnicode(prompt("Введите имена")));
+    params.set(IS_RELATIVES, confirm("Вставить текст для близких людей?"));
+    window.location.search = params.toString();
+}
 
-            if (e.key === "?") {
-                params.set(
-                    TITLE,
-                    b64EncodeUnicode(prompt("Введите текст приглашения!"))
-                );
-                window.location.search = params.toString();
-            }
-        },
-        false
+function initScenarioHandler() {
+    const title = params.get(TITLE);
+    const isRelative = params.get(IS_RELATIVES) === "true" ? true : false;
+
+    console.log(!!isRelative);
+
+    if (!title) {
+        assignVariablesHandler();
+    }
+
+    const text = isRelative ? 'В жизни бывают события неповторимые и незабываемые, которые немыслимы без присутствия близких людей.': 'Бывают в жизни радостные и счастливые моменты, которыми хочется поделиться с другими.'
+
+    document.querySelector(".js-title").innerHTML = text;
+
+    document.querySelector(".js-name").innerText = b64DecodeUnicode(
+        decodeURIComponent(title)
     );
-
-    document.querySelector(".name > div").innerHTML = b64DecodeUnicode(
-        decodeURIComponent(params.get(TITLE))
-    );
-});
+}
 
 function b64EncodeUnicode(str) {
     // first we use encodeURIComponent to get percent-encoded UTF-8,
