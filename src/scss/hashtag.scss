@@ -1,9 +1,15 @@
 .hashtag {
-    font-size: 36px;
+    font-size: 24px;
     // font-family: "tasty_morselregular", cursive;
 
     a {
         color: rgba(255,255,255, 0.8);
         text-decoration: none;
     }
+}
+
+.hashtag--title {
+    font-size: 13px;
+    line-height: 150%;
+    color: #A4DBE4;
 }
